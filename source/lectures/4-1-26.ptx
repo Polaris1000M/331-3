@@ -72,13 +72,16 @@
     <proposition xml:id="prop-minimal-polynomial-properties">
         <title>Properties of Minimal Polynomial</title>
         <p>
-            Let <m>\iota: F[x] \rightarrow F(\alpha)</m> where <m>\iota(x) = \alpha</m>. Define <m>q \in F[x]</m> such that <m>\ker \iota = (q(x))</m> (since <m>F[x]</m> is a PID) where <m>q</m> is monic. We will show that <m>q(x) = p(x)</m>.
-            <ol>
-                <li><m>q(x)</m> is unique. Assume <m>\ker \iota = (r(x))</m>. Then <m>q(x) = a(x) \cdot r(x)</m>. Also, <m>r(x) = b(x) \cdot q(x)</m>. Thus, <me>r(x) = b(x) \cdot (a(x) \cdot r(x)) = (b(x) \cdot a(x)) \cdot r(x)</me>, so <m>b(x)</m> must be a unit and <m>b^{-1} = a</m>. The only units of <m>F[x]</m> are the scalars. Since <m>r(x)</m> and <m>q(x)</m> are both monic, we must have <m>b(x) = 1</m>, so <m>r(x) = q(x)</m>.</li>
-                <li><m>q(\alpha) = 0</m>. This is since <m>\iota(q(x)) = q(\alpha) = 0</m> as <m>q \in \ker \iota</m>. Therefore, <m>q(x) \mid p(x)</m>. However, <m>q</m> and <m>p</m> are both monic and <m>p</m> has minimal degree. Therefore, <m>q(x) = p(x)</m>.</li>
-            </ol>
+            Let <m>\iota: F[x] \rightarrow F(\alpha)</m> where <m>\iota(x) = \alpha</m>. Define <m>q \in F[x]</m> such that <m>\ker \iota = (q(x))</m> (since <m>F[x]</m> is a PID) where <m>q</m> is monic. Then, <m>q(x)</m> is unique and <m>q(x)</m> is the minimal polynomial of <m>\alpha</m>.
         </p>
-        <p>We have shown that the minimal polynomial is unique and can be defined as the generator of <m>\ker \iota</m>.</p>
+        <proof>
+            <p>
+                <ol>
+                    <li><m>q(x)</m> is unique. Assume <m>\ker \iota = (r(x))</m>. Then <m>q(x) = a(x) \cdot r(x)</m>. Also, <m>r(x) = b(x) \cdot q(x)</m>. Thus, <me>r(x) = b(x) \cdot (a(x) \cdot r(x)) = (b(x) \cdot a(x)) \cdot r(x)</me>, so <m>b(x)</m> must be a unit and <m>b^{-1} = a</m>. The only units of <m>F[x]</m> are the scalars. Since <m>r(x)</m> and <m>q(x)</m> are both monic, we must have <m>b(x) = 1</m>, so <m>r(x) = q(x)</m>.</li>
+                    <li>Let <m>p(x)</m> be the minimal polynomial of <m>\alpha</m>. <m>q(\alpha) = 0</m>. This is since <m>\iota(q(x)) = q(\alpha) = 0</m> as <m>q \in \ker \iota</m>. Therefore, <m>q(x) \mid p(x)</m>. However, <m>q</m> and <m>p</m> are both monic and <m>p</m> has minimal degree. Therefore, <m>q(x) = p(x)</m>.</li>
+                </ol>
+            </p>
+        </proof>
     </proposition>
 
     <corollary>
