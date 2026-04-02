@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <docinfo>
+
+    <document-id>chen-abstract-algebra</document-id>
+
+    <macros>\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\C}{\mathbb C} \newcommand{\R}{\mathbb R} \newcommand{\F}{\mathbb F}</macros>
+    <latex-image-preamble>\usepackage{tikz} \usepackage{mathtools}</latex-image-preamble>
+  </docinfo>
+
+  <article xml:id="landing">
+    <title>MATH 331-3</title>
+
+    <xi:include href="./frontmatter.ptx" />
+    <xi:include href="./lectures/3-31-26.ptx" />
+    <xi:include href="./lectures/4-1-26.ptx" />
+    <xi:include href="./introduction.ptx" />
+  </article>
+
+</pretext>

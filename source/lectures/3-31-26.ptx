@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<section xml:id="3-31-26" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>3-31-26</title>
+    <p>Introduction to Field Extensions, Field Adjunctions, and the Characteristic.</p>
+
+    <definition xml:id="def-subfield">
+        <title>Subfield</title>
+        <p>
+            Given a field <m>(F, +, \cdot)</m>, a <em>subfield</em> of <m>F</m> is a subset of <m>F</m>, closed under <m>+</m>, <m>-</m>, <m>\cdot</m>, <m>/</m>.
+        </p>
+    </definition>
+
+    <definition xml:id="def-extension">
+        <title>Extension</title>
+        <p>
+            An <em>extension</em> of <m>F</m> is a field <m>K</m> containing <m>F</m> as a subfield. Denoted <m>K/F</m>.
+        </p>
+    </definition>
+
+    <proposition xml:id="prop-field-homomorphisms-injective">
+        <title>Injectivity of Field Homomorphisms</title>
+        <p>
+            Any homomorphism of fields are injective.
+        </p>
+        <p>
+            Note that we only require the codomain of the homomorphism to be a nonzero ring.
+        </p>
+        <proof>
+            <p>
+                Let <m>F</m> and <m>K</m> be fields and assume <m>\iota: F \rightarrow K</m> is a ring homomorphism. Take <m>I = \ker \iota</m> an ideal of <m>F</m>. Assume <m>I = 0</m>. When, <m>\iota</m> is injective, and we are done. Now assume <m>I \ne 0</m>. By the properties of fields, it must be the case that <m>I = F</m> and <m>\iota(I) = \iota(F) = 0</m>. However, this contradicts <m>1 \ne 0</m> in <m>K</m>. Thus, <m>\ker \iota = 0</m>, so <m>\iota</m> is injective.
+            </p>
+        </proof>
+    </proposition>
+
+    <remark xml:id="prop-field-homomorphisms-codomain">
+        <title>Field Homomorphism Codomain Structures</title>
+        <p>
+            Take <m>\iota: F \hookrightarrow K</m>. <m>\iota</m> turns <m>K</m> into an <m>F</m>-algebra. It follows that <m>K</m> is an <m>F</m>-vector space.
+        </p>
+    </remark>
+
+    <definition xml:id="def-degree">
+        <title>Degree</title>
+        <p>
+            The <em>degree</em> of the extension <m>K/F</m> is the degree of <m>K</m> as an <m>F</m>-vector space.
+        </p>
+        <p>
+            Denoted <m>[K:F]</m>.
+        </p>
+    </definition>
+
+    <example xml:id="ex-degree-C-R">
+        <title>Degree of <m>\C/\R</m></title>
+        <p>
+            <m>\C = \{a + bi \mid a, b \in \R\}</m>. Thus, <m>\{1, i\}</m> is a basis for <m>\C/\R</m> so <m>[\C:\R]</m> = 2.
+        </p>
+    </example>
+
+    <example xml:id="ex-degree-R-Q">
+        <title>Degree of <m>\R/\Q</m></title>
+        <p>
+            If <m>|\Q| = N</m>, we have <m>|\R| = 2^N</m>, as the cardinality of <m>\R</m> has the same cardinality as the power set of <m>\Q</m>. Since the power set of <m>\Q</m> has strictly greater cardinality than <m>\Q</m> by Cantor's Theorem, it follows that <m>\R</m> is uncountable.
+        </p>
+        <p>
+            Now, assume <m>\R</m> has a finite basis. Then, the set of linear combinations of the finite basis with coefficients in <m>\Q</m> would be countable, contradicting the uncountability of <m>\R</m>. Consequently, any basis of <m>\R</m> as a <m>\Q</m>-vector space must be infinite, so <m>[\R:\Q] = \infty</m>.
+        </p>
+    </example>
+
+    <definition xml:id="def-intermediate-field">
+        <title>Intermediate Field</title>
+        <p>
+            An <em>intermediate field</em> of <m>K/F</m> is a field <m>L</m> such that <m>F \subseteq L</m> and <m>K</m> is an extension of <m>L</m>.
+        </p>
+    </definition>
+
+    <example xml:id="ex-Q-sqrt-2">
+        <title><m>\Q(\sqrt 2)</m></title>
+        <p>
+            <m>\sqrt 2 \in \R</m>. Let <m>\Q(\sqrt 2) = \{a + b \sqrt 2 \mid a, b \in \Q\}</m>. Then, <m>\Q(\sqrt 2)</m> is a field.
+        </p>
+        <proof>
+            <p>The field axioms for addition, multiplication, and distributivity are easily shown.</p>
+            <p> Additionally, we have <m>(a + b \sqrt 2)^{-1} = \frac{1}{a^2 - 2b^2}(a - b\sqrt{2})</m>. The denominator <m>a^2 - 2b^2</m> must be nonzero for nonzero <m>a</m> and <m>b</m>. This is clearly true if only one <m>a</m> or <m>b</m> is nonzero. Thus, suppose both <m>a</m> and <m>b</m> are nonzero. If <m>a^2 - 2b^2 = 0</m>, then <m>a^2 = 2b^2</m> which implies <m>\sqrt{2}</m> is rational. Consequently, <m>\Q(\sqrt{2})</m> is closed under multiplicative inverses.</p>
+        </proof>
+    </example>
+
+    <definition xml:id="def-field-adjunction">
+        <title>Field Adjunction</title>
+        <p>Take field extension <m>K/F</m> and let <m>\alpha \in K</m>. Let the <em>field adjunction</em> <m>F(\alpha)</m> be the minimal field <m>L</m>, intermediate to <m>K/F</m>, containing <m>\alpha</m>.</p>
+    </definition>
+
+    <proposition xml:id="prop-field-intersections">
+        <title>Intersections of Fields</title>
+        <p>Given fields <m>F_1, F_2 \subseteq K</m>, <m>F_1 \cap F_2</m> is also a field.</p>
+        <p>Note that this generalizes to arbitrary intersections.</p>
+    </proposition>
+
+    <corollary xml:id="cor-intersections-field-adjunctions">
+        <title>Intersections and Field Adjunctions</title>
+        <p><m>F(\alpha)</m> is the intersection of all intermediate fields of <m>K/F</m> containing <m>\alpha</m>.</p>
+    </corollary>
+
+    <definition xml:id="def-characteristic">
+        <title>Characteristic</title>
+        <p>Given a field <m>F</m>, the <em>characteristic</em> of <m>F</m>, denoted <m>\textrm{char } F</m>, is the minimal positive integer <m>n</m> such that <m>\underset{n \textrm{ times}}{\underbrace{1 + 1 + \cdots + 1}} = 0</m>. If there is no such <m>n</m>, then <m>\textrm{char } F = 0</m>.</p>
+        <p>Note that characteristic is preserved under field extensions and subfields.</p>
+    </definition>
+
+    <example>
+        <p>Ring <m>\F_p = \Z/p\Z</m> is a field for <m>p</m> prime.</p>
+    </example>
+</section>

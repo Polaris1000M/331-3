@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<section xml:id="4-1-26" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>4-1-26</title>
+    <p>Characteristic, Redefinition of Field Adjunctions, and Minimal Polynomials.</p>
+    
+    <proposition xml:id="prop-characteristic-prime">
+        <title>Primality of Characteristic</title>
+        <p><m>\textrm{char } F</m> is either <m>0</m> or prime for field <m>F</m>.</p>
+        <proof>
+            <p>
+                Assume <m>\textrm{char } F = n</m> for some positive, composite <m>n</m>. Let <m>\phi: \Z \rightarrow F</m>. It follows that <m>\ker \phi = (n)</m>. By the Fourth Isomorphism Theorem, there is a bijection between the ideals of <m>\Z</m> containing <m>(n)</m> and the ideals of <m>\textrm{im } \phi</m>. Since <m>n</m> is composite by assumption, assume <m>n = ab</m> for integers <m>a</m> and <m>b</m>. It follows that <m>(n) \subset (a)</m> and <m>(n) \subset (b)</m>. However, this implies the existence of more than two ideals in <m>F</m>, which contradicts the property that fields have only two ideals.
+            </p>
+            <p>
+                Thus, if <m>\textrm{char } F</m> is nonzero, then <m>\textrm{char } F</m> must be prime.
+            </p>
+        </proof>
+    </proposition>
+
+    <example xml:id="ex-F3-adjoin-root-2">
+        <title><m>\F_3(\sqrt{2})</m></title>
+        <p>
+            We want to define objects like <m>\Q(\sqrt{2})</m> without a larger "ambient" field like <m>\R</m>. Thus, define <m>L = \F_3(\sqrt{2})</m> such that
+            <ol>
+                <li><m>L/\F_3</m>.</li>
+                <li><m>L</m> contains <m>\theta</m> such that <m>\theta^2 = 2</m>.</li>
+                <li><m>L</m> is minimal.</li>
+            </ol>
+        </p>
+        <p>Note that <m>L \ne \F_3</m>. <m>0^2 = 0</m>, <m>1^2 = 1</m>, and <m>2^2 = 4 = 1</m>, so there is no element in <m>\F_3</m> whose square is <m>2</m>.</p>
+        <p>The above properties suggest that <m>L = \F_3[x]/(x^2 - 2)</m> where <m>\theta</m> is the image of <m>x</m> in <m>L</m>.</p>
+    </example>
+
+    <proposition xml:id="prop-irred-poly-quotient-field">
+        <title>Irreducibility of <m>p(x)</m> for Field <m>F[x]/(p(x))</m></title>
+        <p>
+            For any field <m>F</m> and any polynomial <m>p(x) \in F[x]</m> of positive degree, the ring <m>F[x]/(p(x))</m> is a field if and only if <m>p(x)</m> is irreducible.
+        </p>
+    </proposition>
+
+    <remark>
+        <p><m>x^2 - 2</m> is irreducible. Assume <m>x^2 - 2</m> is reducible so <m>x^2 - 2 = (x - a)(x - b) = 0</m>. However, there is no <m>a, b \in \F_3</m> such that <m>a^2 = 2</m> or <m>b^2 = 2</m>.</p>
+    </remark>
+
+    <proposition xml:id="prop-deg-poly-quotient-field">
+        <title>Degree of <m>F[x]/(p(x))</m></title>
+        <p>Let <m>F</m> be a field and assume <m>p(x) \in F[x]</m>. Then, <m>[F[x]/(p(x)) : F] = \deg p</m>.</p>
+        <proof>
+            <p>
+            Put <m>L = F[x]/(p(x))</m>, let <m>\theta = \pi(x)</m>> for the quotient map <m>\pi: F[x] \rightarrow L</m>, and assume <m>n = \deg p</m>. We will show that <m>L</m> has basis <m>B = \{1, \theta, \theta^2, \ldots, \theta^{n - 1}\}</m>.
+                <ol>
+                    <li><m>B</m> is linearly independent. Assume there exist coefficients <m>a_{n - 1}, \ldots, a_0</m>, such that <m>a_{n - 1}\theta^{n - 1} + \cdots + a_0 = 0</m>. Let <m>q(x) = a_{n - 1}x^{n - 1} + \cdots + a_0</m>. It must be true that <m>\pi(q(x)) = 0</m>. Then, <m>q(x) \in (p(x))</m>. However, <m>\deg q &lt; n</m> and <m>\deg p = n</m>. The only <m>q</m> satisfying these properties is <m>q(x) = 0</m> so all <m>a_0, \ldots, a_{n - 1}</m> must be 0, as required.</li>
+                    <li><m>B</m> spans <m>L</m>. <m>F[x]</m> is spanned by <m>\{1, x, x^2, \ldots\}</m> so <m>L</m> is spanned by <m>\{1, \theta, \theta^2, \ldots\}</m>. Now, assume without loss of generality that <m>p</m> is monic and <m>p(x) = x^2 + a_{n - 1}x^{n - 1} + \cdots + a_0</m>. We have <me>\theta^n = -a_{n - 1}\theta^{n - 1} - \cdots - a_0</me> since <m>\pi(p(x)) = 0</m>. Consider <m>\theta^{n + 1}</m>. It follows <me>\theta^{n + 1} = -a_{n - 1}\theta^n - \cdots - a_0\theta.</me> It follows, by induction, <me>\theta^{n + k} = -a_{n - 1}\theta^{n + k} - \cdots - a_0\theta^k</me>. Therefore, every <m>\theta^n, \theta^{n + 1}, \ldots</m> is a linear combination in the span of <m>B</m> and <me>\langle B\rangle = \langle 1, \ldots, \theta^n\rangle = \langle 1, \ldots, \theta^{n + 1}\rangle = \langle 1, \theta, \theta^2, \ldots\rangle = L.</me></li>
+                </ol>
+            </p>
+            <p>Consequently, <m>B</m> is a basis of <m>L</m> so <m>[L:F] = n</m>, as required.</p>
+        </proof>
+    </proposition>
+
+    <example xml:id="ex-adjunction-alternative-defs">
+        <title>Alternative Definitions of Prior Adjunctions<m>\F_3(\sqrt{2})</m></title>
+        <p>We can now say that <m>\F_3(\sqrt{2}) \cong \F_3[x]/(x^2 - 2)</m> so <m>[\F_3(\sqrt{2}):\F_3] = 2</m>. Furthermore, <m>\F_3[x]/(x^2 - 2)</m> is minimal since <m>2</m> is the smallest basis greater than <m>1</m> and by the Tower Law, for <m>L/K/F</m>, <m>[L:F] = [L:K] \cdot [K:F]</m>.</p>
+        <p>Additionally, <m>\{a + b\sqrt{2} \mid a, b \in \Q\} \cong \Q(\sqrt{2}) \cong \Q[x]/(x^2 - 2)</m>. Of course, this is still not prove and we must show that <m>\{a + b\sqrt{2} \mid a, b \in \Q\} \cong \Q[x]/(x^2 - 2)</m>.</p>
+    </example>
+
+    <definition xml:id="def-minimal-polynomial">
+        <title>Minimal Polynomial</title>
+        <p>
+            Suppose <m>L/F</m> is a field extension and let <m>\alpha \in L</m>. The <em>minimal polynomial</em> for <m>\alpha</m> is the unique polynomial <m>p(x) \in F[x]</m> of minimum degree such that <m>p(\alpha) = 0</m>.
+        </p>
+    </definition>
+    
+    <proposition xml:id="prop-minimal-polynomial-properties">
+        <title>Properties of Minimal Polynomial</title>
+        <p>
+            Let <m>\iota: F[x] \rightarrow F(\alpha)</m> where <m>\iota(x) = \alpha</m>. Define <m>q \in F[x]</m> such that <m>\ker \iota = (q(x))</m> (since <m>F[x]</m> is a PID) where <m>q</m> is monic. We will show that <m>q(x) = p(x)</m>.
+            <ol>
+                <li><m>q(x)</m> is unique. Assume <m>\ker \iota = (r(x))</m>. Then <m>q(x) = a(x) \cdot r(x)</m>. Also, <m>r(x) = b(x) \cdot q(x)</m>. Thus, <me>r(x) = b(x) \cdot (a(x) \cdot r(x)) = (b(x) \cdot a(x)) \cdot r(x)</me>, so <m>b(x)</m> must be a unit and <m>b^{-1} = a</m>. The only units of <m>F[x]</m> are the scalars. Since <m>r(x)</m> and <m>q(x)</m> are both monic, we must have <m>b(x) = 1</m>, so <m>r(x) = q(x)</m>.</li>
+                <li><m>q(\alpha) = 0</m>. This is since <m>\iota(q(x)) = q(\alpha) = 0</m> as <m>q \in \ker \iota</m>. Therefore, <m>q(x) \mid p(x)</m>. However, <m>q</m> and <m>p</m> are both monic and <m>p</m> has minimal degree. Therefore, <m>q(x) = p(x)</m>.</li>
+            </ol>
+        </p>
+        <p>We have shown that the minimal polynomial is unique and can be defined as the generator of <m>\ker \iota</m>.</p>
+    </proposition>
+
+    <corollary>
+        <p>
+            Let <m>p \in F[x]</m> be the minimal polynomial of <m>\alpha</m> for some <m>\alpha \in L/F</m>. Define <m>\iota: F[x]/(p(x)) \rightarrow F(\alpha)</m> by <m>\iota(\overline{p(x)}) = p(\alpha)</m>. By the First Isomorphism Theorem, <m>\iota</m> is an isomorphism and <m>F[x]/(p(x)) \cong F(\alpha)</m>. Additionally, we have <m>\alpha \in \textrm{im}(\iota)</m> and <m>F(\alpha)</m> is minimal among the fields containing <m>F</m> and <m>\alpha</m>.
+        </p>
+    </corollary>
+
+    <example>
+        <p>
+        Let <m>F = \Q</m>, <m>L = \R</m>, and <m>\alpha = \sqrt{2}</m>. Then, <m>\Q[x]/(x^2 - 2) \cong \Q(\sqrt{2})</m>.
+        </p>
+    </example>
+
+    <remark xml:id="rmk-minimal-poly-nonexistence">
+        <title>Nonexistence of Minimal Polynomials</title>
+        <p>
+            Note that minimal polynomials need not exist. For instance, <m>\pi \in \R</m> has no minimal polynomial in <m>\Q[x]</m> by the work of Lindemann in 1882. Thus, no monic polynomial in <m>\Q</m> vanishes at <m>\pi</m>.
+        </p>
+    </remark>
+
+    <definition xml:id="def-algebraic-transcendental">
+        <title>Algebraic and Transcendental</title>
+        <p>
+            Given <m>\alpha \in L</m>, <m>L/F</m>, <m>\alpha</m> is <em>algebraic</em> ovr <m>F</m> if there is a nonzero polynomial in <m>F[x]</m> vanishing at <m>\alpha</m>. Otherwise, <m>\alpha</m> is called <em>transcendental</em>.
+        </p>
+    </definition>
+</section>
