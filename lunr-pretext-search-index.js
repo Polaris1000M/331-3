@@ -268,7 +268,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3",
   "title": "4-3-26",
-  "body": " 4-3-26  Notes courtesy of Jack Thilin.   Isomorphism of Field Extensions  Given and , say and are isomorphic if there exists a ring isomorphism making the diagram   commute.    Algebraic Elements and Extension Isomorphisms  Given , irreducible , and roots of  as extensions of .   From , we have .     Let . Then, . From , .     Define such that .  Note that is the smallest field containing both the indeterminate and . is in fact the field of rational functions.    Degree of   .    has basis over . By the Tower Law,      Transcendental Elements and Extension Isomorphisms  Let and . If is transcendental, then the extensions and are isomorphic.   Let be the evaluation map at . Since is transcendental, there exists no such that . Consequently, , so is injective.  Then,   and as the inclusion map from to is injective and is injective, it follows that is injective. Furthermore, contains and , so is an isomorphism.     Algebraic Extensions  An extension is algebraic if every is algebraic over .    Degree and Algebraic Extensions  If , then is algebraic.   Assume is not algebraic. Then, there exists transcendental . From , we have . From , it follows that . As is intermediate to , by the Tower Law, we have the contradiction .     Tower Law  Suppose . Then,    If either or , it is easy to see that .  Otherwise, let and . Let be a basis for and be a basis for .  We will now show that is a basis for .  spans . Suppose . Since is a basis for , there exist such that . Furthermore, since each and is a basis for , there exists such that . It follows that and is a linear combination of .  Assume Since is linearly independent, it must be the case that each . Furthermore, as is linearly independent, this only occurs if each , as required.    Consequently, is a basis of so .     Assume and has degree 2. This suggests for some with a minimal polynomial for . Note that has degree 2 from and .  Additionally, has minimal polynomial . Consequently, .   "
+  "body": " 4-3-26  Field Extension Isomorphisms, Field of Rational Functions, Tower Law.  Notes courtesy of Jack Thilin.   Isomorphism of Field Extensions  Given and , say and are isomorphic if there exists a ring isomorphism making the diagram   commute.    Algebraic Elements and Extension Isomorphisms  Given , irreducible , and roots of  as extensions of .   From , we have .     Let . Then, . From , .     Define such that .  Note that is the smallest field containing both the indeterminate and . is in fact the field of rational functions.    Degree of   .    has basis over . By the Tower Law,      Transcendental Elements and Extension Isomorphisms  Let and . If is transcendental, then the extensions and are isomorphic.   Let be the evaluation map at . Since is transcendental, there exists no such that . Consequently, , so is injective.  Then,   and as the inclusion map from to is injective and is injective, it follows that is injective. Furthermore, contains and , so is an isomorphism.     Algebraic Extensions  An extension is algebraic if every is algebraic over .    Degree and Algebraic Extensions  If , then is algebraic.   Assume is not algebraic. Then, there exists transcendental . From , we have . From , it follows that . As is intermediate to , by the Tower Law, we have the contradiction .     Tower Law  Suppose . Then,    If either or , it is easy to see that .  Otherwise, let and . Let be a basis for and be a basis for .  We will now show that is a basis for .  spans . Suppose . Since is a basis for , there exist such that . Furthermore, since each and is a basis for , there exists such that . It follows that and is a linear combination of .  Assume Since is linearly independent, it must be the case that each . Furthermore, as is linearly independent, this only occurs if each , as required.    Consequently, is a basis of so .     Assume and has degree 2. This suggests for some with a minimal polynomial for . Note that has degree 2 from and .  Additionally, has minimal polynomial . Consequently, .   "
 },
 {
   "id": "def-ext-iso",
@@ -289,9 +289,9 @@ var ptx_lunr_docs = [
   "body": " Algebraic Elements and Extension Isomorphisms  Given , irreducible , and roots of  as extensions of .   From , we have .   "
 },
 {
-  "id": "4-3-26-5",
+  "id": "4-3-26-6",
   "level": "2",
-  "url": "4-3-26.html#4-3-26-5",
+  "url": "4-3-26.html#4-3-26-6",
   "type": "Example",
   "number": "3.3",
   "title": "",
@@ -334,9 +334,9 @@ var ptx_lunr_docs = [
   "body": " Algebraic Extensions  An extension is algebraic if every is algebraic over .  "
 },
 {
-  "id": "4-3-26-10",
+  "id": "4-3-26-11",
   "level": "2",
-  "url": "4-3-26.html#4-3-26-10",
+  "url": "4-3-26.html#4-3-26-11",
   "type": "Proposition",
   "number": "3.8",
   "title": "Degree and Algebraic Extensions.",
@@ -352,9 +352,9 @@ var ptx_lunr_docs = [
   "body": " Tower Law  Suppose . Then,    If either or , it is easy to see that .  Otherwise, let and . Let be a basis for and be a basis for .  We will now show that is a basis for .  spans . Suppose . Since is a basis for , there exist such that . Furthermore, since each and is a basis for , there exists such that . It follows that and is a linear combination of .  Assume Since is linearly independent, it must be the case that each . Furthermore, as is linearly independent, this only occurs if each , as required.    Consequently, is a basis of so .   "
 },
 {
-  "id": "4-3-26-12",
+  "id": "4-3-26-13",
   "level": "2",
-  "url": "4-3-26.html#4-3-26-12",
+  "url": "4-3-26.html#4-3-26-13",
   "type": "Example",
   "number": "3.10",
   "title": "",
