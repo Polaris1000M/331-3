@@ -1,21 +1,49 @@
 <?xml version='1.0' encoding='utf-8'?>
 <pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
 
-  <docinfo>
+    <docinfo>
 
     <document-id>chen-abstract-algebra</document-id>
 
-    <macros>\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\C}{\mathbb C} \newcommand{\R}{\mathbb R} \newcommand{\F}{\mathbb F}</macros>
-    <latex-image-preamble>\usepackage{tikz} \usepackage{mathtools}</latex-image-preamble>
-  </docinfo>
+    <macros> 
+        \renewcommand{\Re}{\operatorname{Re}}
+        \renewcommand{\Im}{\operatorname{Im}}
+        \newcommand{\N}{{\mathbb N}}
+        \newcommand{\Z}{{\mathbb Z}}
+        \newcommand{\Q}{{\mathbb Q}}
+        \newcommand{\R}{{\mathbb R}}
+        \newcommand{\C}{{\mathbb C}}
+        \newcommand{\T}{{\mathbb T}}
+        \newcommand{\F}{{\mathbb F}}
+        \newcommand{\PP}{{\mathbb P}}
+        \newcommand{\HH}{{\mathbb H}}
+    </macros>
 
-  <article xml:id="landing">
-    <title>MATH 331-3</title>
+    <!-- If you put any latex-image elements you can include preambles -->
+    <!-- for those in the next element. -->
+    <latex-image-preamble> 
+        \usepackage{tikz}
+        \usepackage{tikz-cd}
+        \usepackage{tkz-graph}
+        \usepackage{tkz-euclide}
+        \usepackage{pgfplots}
+        \usetikzlibrary{matrix,shapes,decorations.pathreplacing,fit,backgrounds,positioning}
+        \usetikzlibrary{patterns}
+        \usetikzlibrary{positioning}
+        \usetikzlibrary{arrows}
+        \usetikzlibrary{calc}
+        \usetikzlibrary{through,intersections,decorations,shadows,fadings}
+    </latex-image-preamble>
+    </docinfo>
 
-    <xi:include href="./frontmatter.ptx" />
-    <xi:include href="./lectures/3-31-26.ptx" />
-    <xi:include href="./lectures/4-1-26.ptx" />
-    <xi:include href="./introduction.ptx" />
-  </article>
+    <article xml:id="landing">
+        <title>MATH 331-3</title>
+
+        <xi:include href="./frontmatter.ptx" />
+        <xi:include href="./lectures/3-31-26.ptx" />
+        <xi:include href="./lectures/4-1-26.ptx" />
+        <xi:include href="./lectures/4-3-26.ptx" />
+        <xi:include href="./introduction.ptx" />
+    </article>
 
 </pretext>

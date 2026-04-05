@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<section xml:id="4-3-26" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>4-3-26</title>
+    <p>Field Extension Isomorphisms, Field of Rational Functions, Tower Law.</p>
+    <p>Notes courtesy of Jack Thilin.</p>
+
+    <definition xml:id="def-ext-iso">
+        <title>Isomorphism of Field Extensions</title>
+        <p>
+            Given <m>L_1/F</m> and <m>L_2/F</m>, say <m>L_1</m> and <m>L_2</m> are isomorphic if there exists a ring isomorphism <m>\varphi: L_1 \overset{\scriptstyle{\sim}}{\rightarrow} L_2</m> making the diagram
+            <image width="35%">
+                <latex-image>
+                    \begin{tikzcd}
+                        L_1 \arrow[rr, "\varphi", "\sim"'] \amp \amp L_2\\
+                        \amp \arrow[ul, hook'] F \arrow[ur, hook] \amp
+                    \end{tikzcd}
+                </latex-image>
+            </image>
+            commute.
+        </p>
+    </definition>
+
+    <corollary xml:id="cor-alg-ext-iso">
+        <title>Algebraic Elements and Extension Isomorphisms</title>
+        <p>
+            Given <m>L/F</m>, irreducible <m>p \in F[x]</m>, and roots <m>\alpha, \beta \in L</m> of <m>p</m> <me>F(\alpha) \cong F(\beta)</me> as extensions of <m>F</m>.
+        </p>
+        <proof>
+            <p>From <xref ref="cor-minimal-poly-iso"/>, we have <m>F(\alpha) \cong F[x]/(p(x)) \cong F(\beta)</m>.</p>
+        </proof>
+    </corollary>
+
+    <example>
+        <p>Let <m>\xi = \frac{-1 + \sqrt{-3}}{2}</m>. Then, <me>x^3 - 2 = (x - \sqrt[3]{2})(x^2 + \sqrt[3]{2}x + \sqrt[3]{4}) = (x - \sqrt[3]{2})(x - \xi \sqrt[3]{2})^2</me>. From <xref ref="cor-alg-ext-iso"/>, <m>\Q(\sqrt[3]{2}) \cong \Q(\xi \sqrt[3]{2})</m>.</p>    
+    </example>
+
+    <definition xml:id="def-frac">
+        <title><m>\textrm{Frac}(F[x])</m></title>
+        <p>Define <m>\textrm{Frac}</m> such that <m>\textrm{Frac}(F[x]) = F(x)</m>.</p>
+        <p>Note that <m>F(x)</m> is the smallest field containing both the indeterminate <m>x</m> and <m>F</m>. <m>F(x)</m> is in fact the field of rational functions.</p>
+    </definition>
+
+    <proposition xml:id="prop-deg-frac">
+        <title>Degree of <m>\textrm{Frac}(F[x])</m></title>
+        <p>
+            <m>[F(x):F] = \infty</m>.
+        </p>
+        <proof>
+            <p>
+                <m>F[x] \subseteq F(x)</m> has basis <m>\{1, x, x^2, \ldots\}</m> over <m>F</m>. By the Tower Law, <me>[F(x):F] = [F(x):F[x]] \cdot [F[x]:F] = [F(x):F[x]] \cdot \infty = \infty.</me>
+            </p>
+        </proof>
+    </proposition>
+
+    <proposition xml:id="prop-trans-ext-iso">
+        <title>Transcendental Elements and Extension Isomorphisms</title>
+        <p>
+            Let <m>L/F</m> and <m>\alpha \in L</m>. If <m>\alpha</m> is transcendental, then the extensions <m>F(x)</m> and <m>F(\alpha)</m> are isomorphic.
+        </p>
+        <proof>
+            <p>
+            Let <m>\phi: F[x] \rightarrow F(\alpha)</m> be the evaluation map at <m>\alpha</m>. Since <m>\alpha</m> is transcendental, there exists no <m>p \in F[x]\backslash \{0\}</m> such that <m>p(\alpha) = 0</m>. Consequently, <m>\ker \phi = \{0\}</m>, so <m>\phi</m> is injective.
+            </p>
+            <p>
+                Then,
+                <image width="40%">
+                    <latex-image>
+                        \begin{tikzcd}
+                            F[x] \arrow[dr] \arrow[rr, hook] \amp \amp F(\alpha)\\
+                            \amp F(x) \arrow[ur, "\exists! \varphi"', dotted] \amp
+                        \end{tikzcd}
+                    </latex-image>
+                </image> and as the inclusion map from <m>F[x]</m> to <m>F(x)</m> is injective and <m>\phi</m> is injective, it follows that <m>\varphi</m> is injective. Furthermore, <m>\textrm{im } \varphi</m> contains <m>F</m> and <m>\alpha</m>, so <m>\varphi</m> is an isomorphism.
+            </p>
+        </proof>
+    </proposition>
+
+    <definition xml:id="def-alg-ext">
+        <title>Algebraic Extensions</title>
+        <p>
+            An extension <m>L/F</m> is <em>algebraic</em> if every <m>\alpha \in L</m> is algebraic over <m>F</m>.
+        </p>
+    </definition>
+
+    <proposition>
+        <title>Degree and Algebraic Extensions</title>
+        <p>If <m>[L:F] &lt; \infty</m>, then <m>L/F</m> is algebraic.</p>
+        <proof>
+            <p>
+                Assume <m>L/F</m> is not algebraic. Then, there exists transcendental <m>\alpha \in L/F</m>. From <xref ref="prop-trans-ext-iso"/>, we have <m>F(\alpha) \cong F(x)</m>. From <xref ref="prop-deg-frac"/>, it follows that <m>[F(\alpha):F] = \infty</m>. As <m>F(\alpha)</m> is intermediate to <m>L/F</m>, by the Tower Law, we have the contradiction <m>[L:F] = \infty</m>.
+            </p>
+        </proof>
+    </proposition>
+
+    <theorem xml:id="thm-tower-law">
+        <title>Tower Law</title>
+        <p>
+            Suppose <m>K/L/F</m>. Then, <me>[K:F] = [K:L][L:F].</me>
+        </p>
+        <proof>
+            <p>
+                If either <m>[K:L] = \infty</m> or <m>[L:F] = \infty</m>, it is easy to see that <m>[K:F] = \infty</m>.
+            </p>
+            <p>
+                Otherwise, let <m>[L:F] = d</m> and <m>[K:L] = e</m>. Let <m>U = \{u_1, \ldots, u_d\}</m> be a basis for <m>L/F</m> and <m>V = \{v_1, \ldots, v_e\}</m> be a basis for <m>K/L</m>.
+            </p>
+            <p>
+                We will now show that <m>B = \{u_i v_j \mid 1 \le i \le d, 1 \le j \le e\}</m> is a basis for <m>K/F</m>.
+                <ol>
+                    <li><m>B</m> spans <m>K/F</m>. Suppose <m>v \in K</m>. Since <m>V</m> is a basis for <m>K/L</m>, there exist <m>c_1, \ldots, c_e \in L</m> such that <m>v = \sum_{i = 1}^{e} c_iv_i</m>. Furthermore, since each <m>c_i \in L</m> and <m>U</m> is a basis for <m>L/F</m>, there exists <m>a_{i1}, \ldots, a_{id} \in F</m> such that <m>\sum_{j = 1}^{d} a_{ij}u_j = c_i</m>. It follows that <me>v = \sum_{i = 1}^{e} \left(\sum_{j = 1}^{d} a_{ij} u_j\right) v_j = \sum_{i = 1}^{e} \sum_{j = 1}^{d} a_{ij} (u_jv_i)</me> and <m>v</m> is a linear combination of <m>B</m>.</li>
+                    <li>Assume <me>0 = \sum_{i = 1}^{e} \sum_{j = 1}^{d} a_{ij}(u_jv_i) = \sum_{i = 1}^{e} \left(\sum_{j = 1}^{d} a_{ij}u_j\right)v_i.</me> Since <m>V</m> is linearly independent, it must be the case that each <m>\sum_{j = 1}^{d} a_{ij}u_j = 0</m>. Furthermore, as <m>U</m> is linearly independent, this only occurs if each <m>a_{ij} = 0</m>, as required.</li>
+                </ol>
+            </p>
+            <p>
+                Consequently, <m>B</m> is a basis of <m>K/F</m> so <m>[K:F] = ed = [K:L][L:F]</m>.
+            </p>
+        </proof>
+    </theorem>
+
+    <example>
+        <p>
+            Assume <m>\textrm{char } F \ne 2</m> and <m>L/F</m> has degree 2. This suggests <m>L = F(\alpha)</m> for some <m>\alpha \in L/F</m> with a minimal polynomial <m>m_\alpha(x) = x^2 + bx + c</m> for <m>b, c \in F</m>. Note that <m>F(\alpha)</m> has degree 2 from <xref ref="cor-minimal-poly-iso"/> and <xref ref="prop-deg-poly-quotient-field"/>.
+        </p>
+        <p>
+            Additionally, <m>\alpha + \frac{b}{2}</m> has minimal polynomial <me>(x - \frac{b}{2})^2 + b(x - \frac{b}{2} + c = x^2 - \frac{b^2}{4} + c</me>. Consequently, <m>L \cong F \left(\sqrt{\frac{b^2}{4} - c}\right)</m>.
+        </p>
+    </example>
+</section>

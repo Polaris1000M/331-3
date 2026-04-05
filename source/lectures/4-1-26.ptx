@@ -46,7 +46,7 @@
         <p>Let <m>F</m> be a field and assume <m>p(x) \in F[x]</m>. Then, <m>[F[x]/(p(x)) : F] = \deg p</m>.</p>
         <proof>
             <p>
-            Put <m>L = F[x]/(p(x))</m>, let <m>\theta = \pi(x)</m>> for the quotient map <m>\pi: F[x] \rightarrow L</m>, and assume <m>n = \deg p</m>. We will show that <m>L</m> has basis <m>B = \{1, \theta, \theta^2, \ldots, \theta^{n - 1}\}</m>.
+            Put <m>L = F[x]/(p(x))</m>, let <m>\theta = \pi(x)</m> for the quotient map <m>\pi: F[x] \rightarrow L</m>, and assume <m>n = \deg p</m>. We will show that <m>L</m> has basis <m>B = \{1, \theta, \theta^2, \ldots, \theta^{n - 1}\}</m>.
                 <ol>
                     <li><m>B</m> is linearly independent. Assume there exist coefficients <m>a_{n - 1}, \ldots, a_0</m>, such that <m>a_{n - 1}\theta^{n - 1} + \cdots + a_0 = 0</m>. Let <m>q(x) = a_{n - 1}x^{n - 1} + \cdots + a_0</m>. It must be true that <m>\pi(q(x)) = 0</m>. Then, <m>q(x) \in (p(x))</m>. However, <m>\deg q &lt; n</m> and <m>\deg p = n</m>. The only <m>q</m> satisfying these properties is <m>q(x) = 0</m> so all <m>a_0, \ldots, a_{n - 1}</m> must be 0, as required.</li>
                     <li><m>B</m> spans <m>L</m>. <m>F[x]</m> is spanned by <m>\{1, x, x^2, \ldots\}</m> so <m>L</m> is spanned by <m>\{1, \theta, \theta^2, \ldots\}</m>. Now, assume without loss of generality that <m>p</m> is monic and <m>p(x) = x^2 + a_{n - 1}x^{n - 1} + \cdots + a_0</m>. We have <me>\theta^n = -a_{n - 1}\theta^{n - 1} - \cdots - a_0</me> since <m>\pi(p(x)) = 0</m>. Consider <m>\theta^{n + 1}</m>. It follows <me>\theta^{n + 1} = -a_{n - 1}\theta^n - \cdots - a_0\theta.</me> It follows, by induction, <me>\theta^{n + k} = -a_{n - 1}\theta^{n + k} - \cdots - a_0\theta^k</me>. Therefore, every <m>\theta^n, \theta^{n + 1}, \ldots</m> is a linear combination in the span of <m>B</m> and <me>\langle B\rangle = \langle 1, \ldots, \theta^n\rangle = \langle 1, \ldots, \theta^{n + 1}\rangle = \langle 1, \theta, \theta^2, \ldots\rangle = L.</me></li>
@@ -84,10 +84,12 @@
         </proof>
     </proposition>
 
-    <corollary>
+    <corollary xml:id="cor-minimal-poly-iso">
+        <title>Minimal Polynomial Isomorphisms</title>
         <p>
-            Let <m>p \in F[x]</m> be the minimal polynomial of <m>\alpha</m> for some <m>\alpha \in L/F</m>. Define <m>\iota: F[x]/(p(x)) \rightarrow F(\alpha)</m> by <m>\iota(\overline{p(x)}) = p(\alpha)</m>. By the First Isomorphism Theorem, <m>\iota</m> is an isomorphism and <m>F[x]/(p(x)) \cong F(\alpha)</m>. Additionally, we have <m>\alpha \in \textrm{im}(\iota)</m> and <m>F(\alpha)</m> is minimal among the fields containing <m>F</m> and <m>\alpha</m>.
+            Let <m>p \in F[x]</m> be the minimal polynomial of <m>\alpha</m> for some <m>\alpha \in L/F</m>. Define <m>\iota: F[x]/(p(x)) \rightarrow F(\alpha)</m> by <m>\iota\left(\overline{f(x)}\right) = f(\alpha)</m>. By the First Isomorphism Theorem, <m>\iota</m> is an isomorphism and <m>F[x]/(p(x)) \cong F(\alpha)</m>. Additionally, we have <m>\alpha \in \textrm{im}(\iota)</m> and <m>F(\alpha)</m> is minimal among the fields containing <m>F</m> and <m>\alpha</m>.
         </p>
+        <p>In other words, if <m>\alpha</m> is algebraic, then <m>F[x]/(p(x)) \cong F(\alpha)</m> where <m>p</m> is the minimal polynomial for <m>\alpha</m> over <m>F</m>.</p>
     </corollary>
 
     <example>
@@ -106,7 +108,7 @@
     <definition xml:id="def-algebraic-transcendental">
         <title>Algebraic and Transcendental</title>
         <p>
-            Given <m>\alpha \in L</m>, <m>L/F</m>, <m>\alpha</m> is <em>algebraic</em> ovr <m>F</m> if there is a nonzero polynomial in <m>F[x]</m> vanishing at <m>\alpha</m>. Otherwise, <m>\alpha</m> is called <em>transcendental</em>.
+            Given <m>\alpha \in L</m>, <m>L/F</m>, <m>\alpha</m> is <em>algebraic</em> over <m>F</m> if there is a nonzero polynomial in <m>F[x]</m> vanishing at <m>\alpha</m>. Otherwise, <m>\alpha</m> is called <em>transcendental</em>.
         </p>
     </definition>
 </section>
