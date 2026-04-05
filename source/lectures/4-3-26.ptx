@@ -62,7 +62,7 @@
             Let <m>\phi: F[x] \rightarrow F(\alpha)</m> be the evaluation map at <m>\alpha</m>. Since <m>\alpha</m> is transcendental, there exists no <m>p \in F[x]\backslash \{0\}</m> such that <m>p(\alpha) = 0</m>. Consequently, <m>\ker \phi = \{0\}</m>, so <m>\phi</m> is injective.
             </p>
             <p>
-                Then,
+                Then, by the Universal Property of Localizations
                 <image width="40%">
                     <latex-image>
                         \begin{tikzcd}
