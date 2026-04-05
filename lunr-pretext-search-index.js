@@ -151,7 +151,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2",
   "title": "4-1-26",
-  "body": " 4-1-26  Characteristic, Redefinition of Field Adjunctions, and Minimal Polynomials.   Primality of Characteristic  is either or prime for field .   Assume for some positive, composite . Let . It follows that . By the Fourth Isomorphism Theorem, there is a bijection between the ideals of containing and the ideals of . Since is composite by assumption, assume for integers and . It follows that and . However, this implies the existence of more than two ideals in , which contradicts the property that fields have only two ideals.  Thus, if is nonzero, then must be prime.      We want to define objects like without a larger \"ambient\" field like . Thus, define such that  .  contains such that .  is minimal.    Note that . , , and , so there is no element in whose square is .  The above properties suggest that where is the image of in .    Irreducibility of for Field  For any field and any polynomial of positive degree, the ring is a field if and only if is irreducible.    is irreducible. Assume is reducible so . However, there is no such that or .    Degree of  Let be a field and assume . Then, .   Put , let > for the quotient map , and assume . We will show that has basis .  is linearly independent. Assume there exist coefficients , such that . Let . It must be true that . Then, . However, and . The only satisfying these properties is so all must be 0, as required.  spans . is spanned by so is spanned by . Now, assume without loss of generality that is monic and . We have since . Consider . It follows It follows, by induction, . Therefore, every is a linear combination in the span of and    Consequently, is a basis of so , as required.     Alternative Definitions of Prior Adjunctions  We can now say that so . Furthermore, is minimal since is the smallest basis greater than and by the Tower Law, for , .  Additionally, . Of course, this is still not prove and we must show that .    Minimal Polynomial  Suppose is a field extension and let . The minimal polynomial for is the unique polynomial of minimum degree such that .    Properties of Minimal Polynomial  Let where . Define such that (since is a PID) where is monic. Then, is unique and is the minimal polynomial of .     is unique. Assume . Then . Also, . Thus, , so must be a unit and . The only units of are the scalars. Since and are both monic, we must have , so .  Let be the minimal polynomial of . . This is since as . Therefore, . However, and are both monic and has minimal degree. Therefore, .       Let be the minimal polynomial of for some . Define by . By the First Isomorphism Theorem, is an isomorphism and . Additionally, we have and is minimal among the fields containing and .    Let , , and . Then, .    Nonexistence of Minimal Polynomials  Note that minimal polynomials need not exist. For instance, has no minimal polynomial in by the work of Lindemann in 1882. Thus, no monic polynomial in vanishes at .    Algebraic and Transcendental  Given , , is algebraic ovr if there is a nonzero polynomial in vanishing at . Otherwise, is called transcendental .   "
+  "body": " 4-1-26  Characteristic, Redefinition of Field Adjunctions, and Minimal Polynomials.   Primality of Characteristic  is either or prime for field .   Assume for some positive, composite . Let . It follows that . By the Fourth Isomorphism Theorem, there is a bijection between the ideals of containing and the ideals of . Since is composite by assumption, assume for integers and . It follows that and . However, this implies the existence of more than two ideals in , which contradicts the property that fields have only two ideals.  Thus, if is nonzero, then must be prime.      We want to define objects like without a larger \"ambient\" field like . Thus, define such that  .  contains such that .  is minimal.    Note that . , , and , so there is no element in whose square is .  The above properties suggest that where is the image of in .    Irreducibility of for Field  For any field and any polynomial of positive degree, the ring is a field if and only if is irreducible.    is irreducible. Assume is reducible so . However, there is no such that or .    Degree of  Let be a field and assume . Then, .   Put , let for the quotient map , and assume . We will show that has basis .  is linearly independent. Assume there exist coefficients , such that . Let . It must be true that . Then, . However, and . The only satisfying these properties is so all must be 0, as required.  spans . is spanned by so is spanned by . Now, assume without loss of generality that is monic and . We have since . Consider . It follows It follows, by induction, . Therefore, every is a linear combination in the span of and    Consequently, is a basis of so , as required.     Alternative Definitions of Prior Adjunctions  We can now say that so . Furthermore, is minimal since is the smallest basis greater than and by the Tower Law, for , .  Additionally, . Of course, this is still not prove and we must show that .    Minimal Polynomial  Suppose is a field extension and let . The minimal polynomial for is the unique polynomial of minimum degree such that .    Properties of Minimal Polynomial  Let where . Define such that (since is a PID) where is monic. Then, is unique and is the minimal polynomial of .     is unique. Assume . Then . Also, . Thus, , so must be a unit and . The only units of are the scalars. Since and are both monic, we must have , so .  Let be the minimal polynomial of . . This is since as . Therefore, . However, and are both monic and has minimal degree. Therefore, .       Minimal Polynomial Isomorphisms  Let be the minimal polynomial of for some . Define by . By the First Isomorphism Theorem, is an isomorphism and . Additionally, we have and is minimal among the fields containing and .  In other words, if is algebraic, then where is the minimal polynomial for over .    Let , , and . Then, .    Nonexistence of Minimal Polynomials  Note that minimal polynomials need not exist. For instance, has no minimal polynomial in by the work of Lindemann in 1882. Thus, no monic polynomial in vanishes at .    Algebraic and Transcendental  Given , , is algebraic over if there is a nonzero polynomial in vanishing at . Otherwise, is called transcendental .   "
 },
 {
   "id": "prop-characteristic-prime",
@@ -196,7 +196,7 @@ var ptx_lunr_docs = [
   "type": "Proposition",
   "number": "2.5",
   "title": "Degree of <span class=\"process-math\">\\(F[x]\/(p(x))\\)<\/span>.",
-  "body": " Degree of  Let be a field and assume . Then, .   Put , let > for the quotient map , and assume . We will show that has basis .  is linearly independent. Assume there exist coefficients , such that . Let . It must be true that . Then, . However, and . The only satisfying these properties is so all must be 0, as required.  spans . is spanned by so is spanned by . Now, assume without loss of generality that is monic and . We have since . Consider . It follows It follows, by induction, . Therefore, every is a linear combination in the span of and    Consequently, is a basis of so , as required.   "
+  "body": " Degree of  Let be a field and assume . Then, .   Put , let for the quotient map , and assume . We will show that has basis .  is linearly independent. Assume there exist coefficients , such that . Let . It must be true that . Then, . However, and . The only satisfying these properties is so all must be 0, as required.  spans . is spanned by so is spanned by . Now, assume without loss of generality that is monic and . We have since . Consider . It follows It follows, by induction, . Therefore, every is a linear combination in the span of and    Consequently, is a basis of so , as required.   "
 },
 {
   "id": "ex-adjunction-alternative-defs",
@@ -226,13 +226,13 @@ var ptx_lunr_docs = [
   "body": " Properties of Minimal Polynomial  Let where . Define such that (since is a PID) where is monic. Then, is unique and is the minimal polynomial of .     is unique. Assume . Then . Also, . Thus, , so must be a unit and . The only units of are the scalars. Since and are both monic, we must have , so .  Let be the minimal polynomial of . . This is since as . Therefore, . However, and are both monic and has minimal degree. Therefore, .     "
 },
 {
-  "id": "4-1-26-11",
+  "id": "cor-minimal-poly-iso",
   "level": "2",
-  "url": "4-1-26.html#4-1-26-11",
+  "url": "4-1-26.html#cor-minimal-poly-iso",
   "type": "Corollary",
   "number": "2.9",
-  "title": "",
-  "body": " Let be the minimal polynomial of for some . Define by . By the First Isomorphism Theorem, is an isomorphism and . Additionally, we have and is minimal among the fields containing and .  "
+  "title": "Minimal Polynomial Isomorphisms.",
+  "body": " Minimal Polynomial Isomorphisms  Let be the minimal polynomial of for some . Define by . By the First Isomorphism Theorem, is an isomorphism and . Additionally, we have and is minimal among the fields containing and .  In other words, if is algebraic, then where is the minimal polynomial for over .  "
 },
 {
   "id": "4-1-26-12",
@@ -259,7 +259,106 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "2.12",
   "title": "Algebraic and Transcendental.",
-  "body": " Algebraic and Transcendental  Given , , is algebraic ovr if there is a nonzero polynomial in vanishing at . Otherwise, is called transcendental .  "
+  "body": " Algebraic and Transcendental  Given , , is algebraic over if there is a nonzero polynomial in vanishing at . Otherwise, is called transcendental .  "
+},
+{
+  "id": "4-3-26",
+  "level": "1",
+  "url": "4-3-26.html",
+  "type": "Section",
+  "number": "3",
+  "title": "4-3-26",
+  "body": " 4-3-26  Notes courtesy of Jack Thilin.   Isomorphism of Field Extensions  Given and , say and are isomorphic if there exists a ring isomorphism making the diagram   commute.    Algebraic Elements and Extension Isomorphisms  Given , irreducible , and roots of  as extensions of .   From , we have .     Let . Then, . From , .     Define such that .  Note that is the smallest field containing both the indeterminate and . is in fact the field of rational functions.    Degree of   .    has basis over . By the Tower Law,      Transcendental Elements and Extension Isomorphisms  Let and . If is transcendental, then the extensions and are isomorphic.   Let be the evaluation map at . Since is transcendental, there exists no such that . Consequently, , so is injective.  Then,   and as the inclusion map from to is injective and is injective, it follows that is injective. Furthermore, contains and , so is an isomorphism.     Algebraic Extensions  An extension is algebraic if every is algebraic over .    Degree and Algebraic Extensions  If , then is algebraic.   Assume is not algebraic. Then, there exists transcendental . From , we have . From , it follows that . As is intermediate to , by the Tower Law, we have the contradiction .     Tower Law  Suppose . Then,    If either or , it is easy to see that .  Otherwise, let and . Let be a basis for and be a basis for .  We will now show that is a basis for .  spans . Suppose . Since is a basis for , there exist such that . Furthermore, since each and is a basis for , there exists such that . It follows that and is a linear combination of .  Assume Since is linearly independent, it must be the case that each . Furthermore, as is linearly independent, this only occurs if each , as required.    Consequently, is a basis of so .     Assume and has degree 2. This suggests for some with a minimal polynomial for . Note that has degree 2 from and .  Additionally, has minimal polynomial . Consequently, .   "
+},
+{
+  "id": "def-ext-iso",
+  "level": "2",
+  "url": "4-3-26.html#def-ext-iso",
+  "type": "Definition",
+  "number": "3.1",
+  "title": "Isomorphism of Field Extensions.",
+  "body": " Isomorphism of Field Extensions  Given and , say and are isomorphic if there exists a ring isomorphism making the diagram   commute.  "
+},
+{
+  "id": "cor-alg-ext-iso",
+  "level": "2",
+  "url": "4-3-26.html#cor-alg-ext-iso",
+  "type": "Corollary",
+  "number": "3.2",
+  "title": "Algebraic Elements and Extension Isomorphisms.",
+  "body": " Algebraic Elements and Extension Isomorphisms  Given , irreducible , and roots of  as extensions of .   From , we have .   "
+},
+{
+  "id": "4-3-26-5",
+  "level": "2",
+  "url": "4-3-26.html#4-3-26-5",
+  "type": "Example",
+  "number": "3.3",
+  "title": "",
+  "body": " Let . Then, . From , .  "
+},
+{
+  "id": "def-frac",
+  "level": "2",
+  "url": "4-3-26.html#def-frac",
+  "type": "Definition",
+  "number": "3.4",
+  "title": "<span class=\"process-math\">\\(\\textrm{Frac}(F[x])\\)<\/span>.",
+  "body": "  Define such that .  Note that is the smallest field containing both the indeterminate and . is in fact the field of rational functions.  "
+},
+{
+  "id": "prop-deg-frac",
+  "level": "2",
+  "url": "4-3-26.html#prop-deg-frac",
+  "type": "Proposition",
+  "number": "3.5",
+  "title": "Degree of <span class=\"process-math\">\\(\\textrm{Frac}(F[x])\\)<\/span>.",
+  "body": " Degree of   .    has basis over . By the Tower Law,    "
+},
+{
+  "id": "prop-trans-ext-iso",
+  "level": "2",
+  "url": "4-3-26.html#prop-trans-ext-iso",
+  "type": "Proposition",
+  "number": "3.6",
+  "title": "Transcendental Elements and Extension Isomorphisms.",
+  "body": " Transcendental Elements and Extension Isomorphisms  Let and . If is transcendental, then the extensions and are isomorphic.   Let be the evaluation map at . Since is transcendental, there exists no such that . Consequently, , so is injective.  Then,   and as the inclusion map from to is injective and is injective, it follows that is injective. Furthermore, contains and , so is an isomorphism.   "
+},
+{
+  "id": "def-alg-ext",
+  "level": "2",
+  "url": "4-3-26.html#def-alg-ext",
+  "type": "Definition",
+  "number": "3.7",
+  "title": "Algebraic Extensions.",
+  "body": " Algebraic Extensions  An extension is algebraic if every is algebraic over .  "
+},
+{
+  "id": "4-3-26-10",
+  "level": "2",
+  "url": "4-3-26.html#4-3-26-10",
+  "type": "Proposition",
+  "number": "3.8",
+  "title": "Degree and Algebraic Extensions.",
+  "body": " Degree and Algebraic Extensions  If , then is algebraic.   Assume is not algebraic. Then, there exists transcendental . From , we have . From , it follows that . As is intermediate to , by the Tower Law, we have the contradiction .   "
+},
+{
+  "id": "thm-tower-law",
+  "level": "2",
+  "url": "4-3-26.html#thm-tower-law",
+  "type": "Theorem",
+  "number": "3.9",
+  "title": "Tower Law.",
+  "body": " Tower Law  Suppose . Then,    If either or , it is easy to see that .  Otherwise, let and . Let be a basis for and be a basis for .  We will now show that is a basis for .  spans . Suppose . Since is a basis for , there exist such that . Furthermore, since each and is a basis for , there exists such that . It follows that and is a linear combination of .  Assume Since is linearly independent, it must be the case that each . Furthermore, as is linearly independent, this only occurs if each , as required.    Consequently, is a basis of so .   "
+},
+{
+  "id": "4-3-26-12",
+  "level": "2",
+  "url": "4-3-26.html#4-3-26-12",
+  "type": "Example",
+  "number": "3.10",
+  "title": "",
+  "body": " Assume and has degree 2. This suggests for some with a minimal polynomial for . Note that has degree 2 from and .  Additionally, has minimal polynomial . Consequently, .  "
 }
 ]
 
